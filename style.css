@@ -1,0 +1,273 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --ff-primary: 'Roboto', sans-serif;
+  --ff-secondary: 'Roboto Mono', monospace;
+
+  --primary-color: #065E7C;
+  --secondary-color: #06181C;
+
+  --fc-primary: #FFFFFF;
+  --bg-primary: #4A808C;
+
+  --fc-tbody: #E1E1E6;
+  --fc-input: #7C7C8A;
+  --fc-noContent: #4E5455;
+
+  --bg-thead: #092d38;
+  --bg-error: #F75A68;
+  --bg-noContent: #030B0D;
+
+  --bg-color-body: #000000;
+}
+
+body {
+  font-size: 1.6rem;
+
+  font-family: var(--ff-primary);
+  background-color: var(--bg-color-body);
+}
+
+
+.page {
+  max-width: 112rem;
+  margin: 0 auto;
+}
+
+header {
+  margin-top: 11.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between
+}
+
+.entry {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.entry input {
+  width: 46.2rem;
+  height: 4.8rem;
+
+  border: none;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+
+  padding: 1.6rem;
+  background: var(--secondary-color);
+  color: var(--fc-input);
+
+  border-radius: 0.5rem;
+}
+
+.entry button {
+  width: 17rem;
+  height: 4.8rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+
+  border: none;
+  border-radius: 0.5rem;
+  background: var(--primary-color);
+  color: var(--fc-primary);
+
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  font-weight: 700;
+
+}
+
+.btn:hover {
+  background: var(--fc-primary);
+  color: var(--primary-color);
+  ;
+}
+
+
+.btn:hover .svgImage {
+  background: var(--fc-primary);
+  fill: var(--primary-color);
+}
+
+
+
+.tableContainer {
+  margin-top: 8.7rem;
+  border-radius: 1.2rem;
+  border: 1px solid var(--bg-primary);
+
+  overflow: hidden;
+}
+
+
+table {
+  width: 100%;
+
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 3.2rem;
+
+  border-spacing: 0;
+
+  background: rgba(6, 22, 27, 0.5);
+  color: var(--fc-primary);
+}
+
+thead tr {
+  display: flex;
+}
+
+thead tr th {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 6.4rem;
+
+  background: var(--bg-thead);
+  padding: 1.6rem 2.4rem 1.6rem 4rem;
+}
+
+
+table th:first-child {
+  width: 50.4rem;
+}
+
+table .repositories {
+  width: 21.8rem;
+}
+
+table .followers {
+  width: 22rem;
+}
+
+table th:last-child {
+  width: 17.8rem;
+}
+
+table tbody {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  max-height: 60rem;
+  overflow: auto;
+  padding-bottom: 1rem;
+}
+
+table tbody::-webkit-scrollbar {
+  width: 1rem;
+  height: 12.2rem;
+
+  background: transparent;
+}
+
+table tbody::-webkit-scrollbar-thumb {
+  background: var(--bg-primary);
+  border-radius: 1rem;
+}
+
+
+table tbody tr {
+  display: flex;
+  border-bottom: 1px solid var(--bg-primary);
+  padding: 1.6rem 2.4rem 1.6rem 4rem;
+}
+
+table tbody tr:nth-child(even) {
+  background: var(--secondary-color);
+}
+
+/* table tr:nth-child(odd) {
+  background: #ddd;
+} */
+
+td.user {
+  width: 50.4rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+td.user a p,
+td.user a span {
+  color: var(--fc-tbody);
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 3.2rem;
+}
+
+td.user a span {
+  font-weight: 400;
+}
+
+
+td.user img {
+  width: 5rem;
+  height: 5rem;
+
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+td.user a {
+  text-decoration: none;
+}
+
+td.user a p {
+  font-weight: bold;
+}
+
+td .remove {
+  background: transparent;
+  border: none;
+
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 3.2rem;
+
+  color: var(--bg-error);
+  cursor: pointer;
+}
+
+.noContent {
+  height: 62.4rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6rem;
+
+  background: var(--bg-noContent);
+}
+
+.noContent img {
+  width: 13.2rem;
+  height: 12.5rem;
+}
+
+.noContent h1 {
+  font-family: var(--ff-secondary);
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 2.5rem;
+
+  color: var(--fc-noContent);
+}
+
+.hide {
+  display: none;
+}
